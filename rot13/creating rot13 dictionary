@@ -1,0 +1,16 @@
+
+#creating a rot13 dictionary:
+#a dictionary that replaces a letter with the 13th letter after it,
+#in the alphabet.
+
+ab_key = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
+ab_key = list(ab_key)
+ab_key.sort()
+
+first_half = ab_key[ :13]
+second_half = ab_key[13: ]
+
+rot13 = dict(zip(first_half,second_half))
+rot13_2 = dict(zip(second_half,first_half))
+
+rot13.update(rot13_2)
