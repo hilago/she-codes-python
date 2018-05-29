@@ -1,7 +1,7 @@
 
-#creating a rot13 dictionary:
-#a dictionary that replaces a letter with the 13th letter after it,
-#in the alphabet.
+'''creating a rot13 dictionary:
+a dictionary that replaces a letter with the 13th letter after it,
+in the alphabet.'''
 
 ab_key = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'}
 ab_key = list(ab_key)
