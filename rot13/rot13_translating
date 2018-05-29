@@ -1,1 +1,37 @@
 
+rot13 = {'a': 'n', 'b': 'o', 'c': 'p', 'd': 'q', 'e': 'r', 'f': 's', 'g': 't',
+             'h': 'u', 'i': 'v', 'j': 'w', 'k': 'x', 'l': 'y', 'm': 'z', 'n': 'a',
+             'o': 'b', 'p': 'c', 'q': 'd', 'r': 'e', 's': 'f', 't': 'g', 'u': 'h',
+             'v': 'i', 'w': 'j', 'x': 'k', 'y': 'l', 'z': 'm'}
+             
+def translat_sentence(str):
+
+    new_str = ""
+    for i in range(len(str)):
+        if str[i] in rot13:
+            new_str += rot13[str[i]]
+        else:
+            new_str += str[i]
+    return new_str
+    
+
+print(translat_sentence("v nz yrneavat clguba jvgu fur pbqrf npnqrzl!"))
+output: i am learning python with she codes academy!
+
+
+or
+
+def trans(str):
+   new_str =[]
+   for i in range(len(str)):
+      if rot13.get(str[i],"none")!="none":
+          new_str.append(rot13[str[i]])
+      else:
+          new_str.append(str[i])
+
+   new_str = "".join(new_str)
+   return new_str
+
+print(trans("v nz yrneavat clguba jvgu fur pbqrf npnqrzl!"))
+output: i am learning python with she codes academy!
+
