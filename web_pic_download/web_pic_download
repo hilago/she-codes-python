@@ -1,0 +1,15 @@
+import random
+import urllib.request
+
+def web_pic_download(url):
+
+#creating a name for the downloaded pic (not the best way, same num could come up twice!):
+
+  pic_num = random.randrange(1,100)
+  pic_name = str(pic_num) + ".jpg"
+
+  urllib.request.urlretrieve(url,pic_name)
+
+  
+#calling the function: 
+web_pic_download("url")
