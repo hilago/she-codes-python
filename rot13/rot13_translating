@@ -25,6 +25,9 @@ def trans(str):
    new_str =[]
    for i in range(len(str)):
       if rot13.get(str[i],"none")!="none":
+      
+      #(,"none")!="none":anything that is not in the dictionary
+      
           new_str.append(rot13[str[i]])
       else:
           new_str.append(str[i])
