@@ -8,11 +8,13 @@ def translat_sentence(str):
 
     new_str = ""
     for i in range(len(str)):
-        if str[i] in rot13:
-            new_str += rot13[str[i]]
+        if str[i].lower() in rot13:
+            new_str += rot13[str[i].lower()]
         else:
-            new_str += str[i]
+            new_str += str[i].lower()
     return new_str
+
+
     
 
 print(translat_sentence("v nz yrneavat clguba jvgu fur pbqrf npnqrzl!"))
@@ -21,19 +23,23 @@ output: i am learning python with she codes academy!
 
 or
 
-def trans(str):
-   new_str =[]
-   for i in range(len(str)):
-      if rot13.get(str[i],"none")!="none":
-      
-      #(,"none")!="none":anything that is not in the dictionary
-      
-          new_str.append(rot13[str[i]])
-      else:
-          new_str.append(str[i])
 
-   new_str = "".join(new_str)
-   return new_str
+def trans(str):
+    new_str = []
+    str.lower()
+    
+    for i in range(len(str)):
+        if rot13.get(str[i], "none") != "none":
+
+            # (,"none")!="none": -> "none" = not in the dictionary
+
+            new_str.append(rot13[str[i]])
+        else:
+            new_str.append(str[i])
+
+    new_str = "".join(new_str)
+    return new_str
+
 
 print(trans("v nz yrneavat clguba jvgu fur pbqrf npnqrzl!"))
 output: i am learning python with she codes academy!
