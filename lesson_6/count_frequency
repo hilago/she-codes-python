@@ -1,0 +1,11 @@
+
+
+def char_freq(str):
+    freq = {}
+
+    for l in str:
+        freq[l]=str.count(l)
+
+    return freq
+    
+    
