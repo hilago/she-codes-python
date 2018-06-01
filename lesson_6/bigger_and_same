@@ -1,0 +1,12 @@
+
+
+def bigger_and_same(strings):
+
+    count = 0
+
+    for str in strings:
+        if (len(str) >= 2)  and  (str[0]==str[-1]):
+            count += 1
+
+
+    return count
