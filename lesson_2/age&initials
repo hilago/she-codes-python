@@ -1,0 +1,19 @@
+
+import datetime
+
+
+def age_initials():
+
+    now = datetime.datetime.now()
+    
+    name = str(input("what is you first name? "))
+    
+    last_name = str(input("what is your surname? "))
+    
+    birth_year = int(input("what year were you born in? "))
+    
+    age = now.year - birth_year
+
+    return f'your initials are {name[0]}.{last_name[0]} and your age is {age}'
+
+
