@@ -1,0 +1,22 @@
+
+import random
+
+def guess_num():
+
+    computer_num = random.randint(1,10)
+    user_num = int(input("guess the computers number (between 1-10): "))
+
+    while computer_num != user_num:
+
+
+      if computer_num > user_num:
+          print("your guess is too low")
+
+
+      if computer_num < user_num:
+          print("your guess is too high")
+
+      user_num = int(input("guess again: "))
+
+    print("your guess is right!!!")
+    
